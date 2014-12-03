@@ -2,25 +2,38 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta content="width=device-width;initial-scale=1.0" name="viewport">
-<script src="components/bower_components/platform/platform.js"></script>
+<meta content="width=device-width,initial-scale=1.0" name="viewport">
+<script src="components/bower_components/webcomponentsjs/webcomponents.js"></script>
 <link rel="import" href="components/bower_components/paper-elements/paper-elements.html">
 <link rel="import" href="components/bower_components/core-toolbar/core-toolbar.html">
+  <link href="components/bower_components/core-collapse/core-collapse.html" rel="import">
+  <link href="components/bower_components/core-dropdown/core-dropdown.html" rel="import">
+  <link href="components/bower_components/core-icons/core-icons.html" rel="import">
+  <link href="components/bower_components/core-icon-button/core-icon-button.html" rel="import">
+  <link href="components/bower_components/core-item/core-item.html" rel="import">
+  <link href="components/bower_components/core-menu/core-menu.html" rel="import">
+
+  <link href="components/bower_components/core-menu-button/core-menu-button.html" rel="import">
 <title>R&eacute;sum&eacute; for Eric L Epps</title>
-<style id="forJS" type="text/css"></style>
+<style type="text/css">core-item a:link { color:black; text-decoration:none; }</style>
 </head>
-<body onscroll="showToTop()">
-<paper-button>Test</paper-button>
+<body>
 <core-toolbar>
-	<paper-menu-button icon="menu">
-    	<paper-item>Cover Letter</paper-item>
-    	<paper-item>Education</paper-item>
-    	<paper-item>Experience</paper-item>
-    	<paper-item>Skills</paper-item>
-    	<paper-item>Contact</paper-item>
-     </paper-menu-button>
-	<span flex>Eric L. Epps</span>
-    </core-toolbar>
+	<core-menu-button>
+	<core-icon-button icon="menu"></core-icon-button>
+    <core-dropdown class="dropdown" layered>
+    <core-menu>
+       	<core-item label="Cover Letter"><a href="cover-letter.html"></a></core-item>
+    	<core-item label="Education"><a href="education.html"></a></core-item>
+    	<core-item label="Experience"><a href="experience.html"></a></core-item>
+    	<core-item label="Skills"><a href="skills.html"></a></core-item>
+    	<core-item label="Contact"><a href="contact.html"></a></core-item>
+    </core-menu>
+    </core-dropdown>
+    </core-menu-button>
+    	<span flex>Eric L. Epps</span>
+     </core-toolbar>
+
 	<div class="adr">
 		<span class="street-address">PO Box 363</span><br/>
 		<span class="locality">Rock Falls</span>, <span class="region">IL</span> <span class="postal-code">61071</span>
@@ -30,5 +43,6 @@
 		<span class="tel">815-293-7771</span>
 	</div>
 	<hr />
+    <div style="height:1000px;background:black;">sadf</div>
 </body>
 </html>
