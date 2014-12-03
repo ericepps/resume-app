@@ -3,117 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta content="width=device-width;initial-scale=1.0" name="viewport">
-<!--
-Oh, good! I was hoping someone would check out my source code!
+<script src="components/bower_components/webcomponentsjs/webcomponents.js"></script>
+<link rel="import" href="components/bower_components/paper-elements/paper-elements.html">
+<link rel="import" href="components/bower_components/core-toolbar/core-toolbar.html">
+  <link href="components/bower_components/core-collapse/core-collapse.html" rel="import">
+  <link href="components/bower_components/core-dropdown/core-dropdown.html" rel="import">
+  <link href="components/bower_components/core-icons/core-icons.html" rel="import">
+  <link href="components/bower_components/core-icon-button/core-icon-button.html" rel="import">
+  <link href="components/bower_components/core-item/core-item.html" rel="import">
+  <link href="components/bower_components/core-menu/core-menu.html" rel="import">
 
-This document is valid HTML5, responsive, interactive, completely self-contained (no images, 
-external libraries/references, etc.), and degrades gracefully.
--->
+  <link href="components/bower_components/core-menu-button/core-menu-button.html" rel="import">
 <title>R&eacute;sum&eacute; for Eric L Epps</title>
-<style type="text/css">
-html, body {min-height:100%;}
-body {font-family:Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;font-size:14px;background:#cdb380;background:-moz-linear-gradient(top, rgb(150,125,125) 0%, rgb(85,70,70) 100%);background:-webkit-linear-gradient(top, rgba(209,22,0,0.75) 0%,rgb(85,70,70) 100%);background:-o-linear-gradient(top, rgb(150,125,125) 0%,rgb(85,70,70) 100%);background:-ms-linear-gradient(top, rgb(150,125,125) 0%,rgb(85,70,70) 100%);background:linear-gradient(to bottom, rgb(135,125,125) 0%,rgb(75,70,70) 100%);}
-body, html, h1, h2, h3, ul, li, div, hr {margin:0px;padding:0px;}
-h1, h2, h3 { text-shadow:1px 1px 3px rgba(0,0,0,.4); }
-h1, h1 a, h1 a:link, h1 a:visited {color:rgb(35,0,0);font-size:22px;}
-h2, h2 a, h2 a:link, h2 a:visited {color:rgb(55,0,0);font-size:18px;}
-h3, h3 a, h3 a:link, h3 a:visited {color:rgb(113,10,27);font-size:16px;}
-a, a:link {text-decoration:none;color:#666;}
-a:visited {color:#333;}
-
-li {margin-left:7ex;padding-top:.5ex;}
-hr {clear:both;border:none;}
-.hoverTitle {border-bottom:1px dotted #999;}
-
-header, nav, section, article {clear:both;width:95%;margin:0px auto;padding:2ex .5em;background:#FFF;background:rgba(255,255,255,.7);}
-header {margin-top:.75em;border-top-left-radius:9px;border-top-right-radius:9px;}
-header h1 {font-size:24px;text-align:center;}
-header div {float:right;text-align:right;margin:0px 2em;}
-header div.adr {float:left;text-align:left;}
-header a, header a:link, header a:visited {color:#000;}
-nav {display:none;padding:.5em;background:#000;}
-nav h2 {display:inline-block;font-size:16px;color:#fff;}
-nav ul {display:inline;line-height:35px;}
-nav ul li {list-style-type:none;display:inline-block;margin:0px 1ex;}
-nav ul li a, nav ul li a:link, nav ul li a:visited {color:#FFF;font-weight:bold;border-radius:9px;border:1px solid #c03;box-shadow:1px 1px 3px rgba(0,0,0,.3);padding:.5ex .5em;background:#710a1b;background:-moz-linear-gradient(top, rgb(113,10,27) 0%, rgb(193,18,47) 100%);
-background:-webkit-linear-gradient(top, rgb(113,10,27) 0%,rgb(193,18,47) 100%);
-background:-o-linear-gradient(top, rgb(113,10,27) 0%,rgb(193,18,47) 100%);
-background:-ms-linear-gradient(top, rgb(113,10,27) 0%,rgb(193,18,47) 100%);
-background:linear-gradient(to bottom, rgb(113,10,27) 0%,rgb(193,18,47) 100%);}
-nav ul li a:hover {background:rgb(113,10,27) ;box-shadow:1px 1px 5px rgba(0,0,0,.5);}
-nav div#jump { display:none; }
-section>h1 {border-bottom:double 3px #031634;text-align:center;padding-top:0px;font-size:20px;}
-section>p {text-align:center;}
-article {padding:1.5%;border-radius:5px;box-shadow:1px 1px 5px rgba(0, 0, 0, .2);margin-top:1em;}
-article hgroup h1 {font-size:18px;}
-article hgroup h2 {float:right;font-size:16px;}
-article hgroup h2, article hgroup h2 a, article hgroup h2 a:link, article hgroup h2 a:visited {color:rgb(113,10,27);}
-article hgroup {border-bottom:1px solid rgb(85,70,70);}
-article ul li.highlight {text-shadow:0px 0px 1px rgba(0,0,0,.4);}
-.showMore {display:none;text-align:center;margin:5px 0px;}
-.showMore a {padding:3px 8px;background:#dcc;border-radius:7px;box-shadow:1px 1px 3px #fff;}
-section#skills {border-bottom-left-radius:9px;border-bottom-right-radius:9px;}
-section#skills article {width:45%;clear:none;}
-article#skillsProf {float:left;margin-left:1.5%;}
-article#skillsExp {float:right;margin-right:1.5%;}
-article a, article a:link { border-bottom:1px dotted #999; }
-article a:hover { border-bottom:1px solid #ccc; }
-article a:visited { border-bottom:1px dotted #ccc; }
-body {padding-bottom:.75em;}
-
-div#top {position:fixed;top:75%;right:0px;padding:8px 13px;background:rgb(113,10,27);color:#FFF;display:none;}
-div#top a:link, div#top a:visited {color:#fff;}
-div#top a:hover {color:#ddd;}
-
-@media (max-width:768px) {
-	.month {display:none;}
-	header, nav, section {width:100%;margin:0px;padding:0px;}
-	header>*, nav>* {margin:0px 3px;}
-}
-@media (max-width:600px) {
-	article hgroup h2 {float:none;font-size:16px;}
-	article ul li.normal {display:none;}
-	.showMore {display:block;}
-	nav>div#jump {display:block;}
-	li {margin-left:3ex;}
-	nav ul li {margin:0px;}
-	section#skills article {width:auto;float:none;margin:0px auto;padding:2ex .5em;}
-}
-@media (max-width:300px) {
-	header div {float:none;text-align:left;}
-	nav>h2 {display:block;}
-	nav {font-size:90%;}
-	article, section p {font-size:80%;}
-	article hgroup h1, article h1, article hgroup h2, article hgroup h2 a, article hgroup h2 a:link, article hgroup h2 a:visited, article hgroup h3 {font-size:14px;}
-}
-@media print {
-	body, h1, h2, h3, * {color:black !important;text-shadow:none !important;}
-	header, section, article {width:100%;margin:0px;}
-	header, section {font-size:90%;}
-	header h1 {text-align:center;}
-	nav, div#top, div.showMore {display:none !important;}
-	section {margin-top:5px;}
-	section>h1 { padding-bottom:5px; border-bottom:2px solid black; }
-	li { padding-top:0px; }
-	article {width:auto;margin:0px;margin-top:5px;box-shadow:none;border-bottom:1px solid black;border-radius:0px;}
-	article ul {clear:both;}
-	article:last-child {border:none;}
-	article ul li {margin-left:3ex; font-size:.9em;}
-	article ul li.highlight {text-shadow:none;}
-	article ul li.normal { display:list-item; }
-	article hgroup h1, article hgroup h2, article hgroup h2 a, article hgroup h2 a:link, article hgroup h2 a:visited, article hgroup h3 {font-size:13px;}
-	article hgroup h1, article hgroup h2, article hgroup h3 {width:33%;float:left;}
-	article hgroup h2 {text-align:center;}
-	article hgroup h3 {text-align:right;width:34%;}
-	article hgroup {border:none;}
-	article a, article a:link, article a:hover, article a:visited { border-bottom:none; }
-	section#skills article {border-bottom:none; width:46%; float:left;}
-	.hoverTitle {border:none;}
-}
-</style>
-<style id="forJS" type="text/css"></style>
+<style type="text/css">core-item a:link { color:black; text-decoration:none; }</style>
 </head>
-<body onscroll="showToTop()">
+<body>
+<core-toolbar>
+	<core-menu-button>
+	<core-icon-button icon="menu"></core-icon-button>
+    <core-dropdown class="dropdown" layered>
+    <core-menu>
+       	<core-item label="Cover Letter"><a href="cover-letter.html"></a></core-item>
+    	<core-item label="Education"><a href="education.html"></a></core-item>
+    	<core-item label="Experience"><a href="experience.html"></a></core-item>
+    	<core-item label="Skills"><a href="skills.html"></a></core-item>
+    	<core-item label="Contact"><a href="contact.html"></a></core-item>
+    </core-menu>
+    </core-dropdown>
+    </core-menu-button>
+    	<span flex>Eric L. Epps</span>
+     </core-toolbar>
 <header class="vcard">
 	<h1 class="fn">Eric L. Epps</h1>
 	<div class="adr">
