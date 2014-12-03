@@ -5,7 +5,7 @@
         version     = "3.6.3" >
 
     <!-- versionCode is optional and Android only -->
-
+    <icon src="initials-30px.png" />
     <name>Resume for Eric L. Epps</name>
 
     <description>
