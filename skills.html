@@ -14,7 +14,7 @@
   <link href="components/bower_components/core-menu/core-menu.html" rel="import">
 
   <link href="components/bower_components/core-menu-button/core-menu-button.html" rel="import">
-<title>R&eacute;sum&eacute; for Eric L Epps</title>
+<title>Skills - R&eacute;sum&eacute; for Eric L Epps</title>
 <style type="text/css">core-item a:link { color:black; text-decoration:none; }</style>
 </head>
 <body>
@@ -23,7 +23,7 @@
 	<core-icon-button icon="menu"></core-icon-button>
     <core-dropdown class="dropdown" layered>
     <core-menu>
-       	<core-item label="Cover Letter"><a href="cover-letter.html"></a></core-item>
+       	<core-item label="Cover Letter"><a href="index.html"></a></core-item>
     	<core-item label="Education"><a href="education.html"></a></core-item>
     	<core-item label="Experience"><a href="experience.html"></a></core-item>
     	<core-item label="Skills"><a href="skills.html"></a></core-item>
@@ -63,68 +63,6 @@
 	</article>
     <hr/>
 </section>
-<div id="top"><a href="#">top</a></div>
-<script type="text/javascript">
-var navs = document.getElementsByTagName('nav');
-for (var i = 0;i < navs.length;i++) {
-	navs[i].style.display = 'block';
-}
-var articles = document.getElementsByTagName('article');
-for (var a = 0;a < articles.length;a++) {
-	var lis = articles[a].getElementsByTagName('li');
-	for (var i = 0;i < lis.length;i++) {
-		if (lis[i].className == '') {
-			lis[i].className = 'normal';
-		}
-		var hrefs = lis[i].getElementsByTagName('a');
-		for (var h = 0;h < hrefs.length;h++) {
-			hrefs[h].setAttribute('target', '_blank');
-		}
-	}
-}
-function showToTop() {
-	if(elementInViewport(document.getElementById('education'))) {
-		document.getElementById('top').style.display = 'block';
-	} else {
-		document.getElementById('top').style.display = 'none';
-	}
-}
-// Source for elementInViewport() -- https://gist.github.com/2300296
-function elementInViewport(el) {
-  var rect = el.getBoundingClientRect()
-  return rect.top < (window.innerHeight || document.body.clientHeight) && rect.left < (window.innerWidth || document.body.clientWidth);
-}
-
-function showCascade() {
-	styleEl = document.getElementById("forJS");
-	styleEl.innerHTML = '.cascade{background:rgba(0,0,255,.3);box-shadow:0px 0px 5px rgba(0,0,255,.3);}';
-}
-function showPHP() {
-	styleEl = document.getElementById("forJS");
-	styleEl.innerHTML = '.php{background:rgba(255,0,0,.3);box-shadow:0px 0px 5px rgba(255,0,0,.3);}';
-}
-function showSQL() {
-	styleEl = document.getElementById("forJS");
-	styleEl.innerHTML = '.mysql{background-color:rgba(0,255,0,.3);box-shadow:0px 0px 5px rgba(0,255,0,.3);}';
-}
-function showADA() {
-	styleEl = document.getElementById("forJS");
-	styleEl.innerHTML = '.ada{background:rgba(255,255,0,.5);box-shadow:0px 0px 5px rgba(255,255,0,.5);}';
-}
-function clearAll() {
-	styleEl = document.getElementById("forJS");
-	styleEl.innerHTML = '';
-}
-function showMore(articleID, el) {
-	styleEl = document.getElementById("forJS");
-	if (el.innerHTML == 'Show All') {
-		styleEl.innerHTML = styleEl.innerHTML + '#' + articleID + ' ul li.normal {display:list-item;}';
-		el.innerHTML = 'Show Highlights';
-	} else {
-		styleEl.innerHTML = styleEl.innerHTML.replace('#' + articleID + ' ul li.normal {display:list-item;}','');
-		el.innerHTML = 'Show All';
-	}
-}
-</script>
+<script src="actions.js"></script>
 </body>
 </html>
