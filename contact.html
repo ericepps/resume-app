@@ -18,21 +18,30 @@
 <style type="text/css">core-item a:link { color:black; text-decoration:none; }</style>
 </head>
 <body>
+
+
 <core-toolbar>
 	<core-menu-button>
-	<core-icon-button icon="menu"></core-icon-button>
+	<core-icon-button icon="menu" core-drawer-toggle></core-icon-button>
+    
+    
     <core-dropdown class="dropdown" layered>
     <core-menu>
-       	<core-item label="Cover Letter"><a href="cover-letter.html"></a></core-item>
-    	<core-item label="Education"><a href="education.html"></a></core-item>
-    	<core-item label="Experience"><a href="experience.html"></a></core-item>
-    	<core-item label="Skills"><a href="skills.html"></a></core-item>
-    	<core-item label="Contact"><a href="contact.html"></a></core-item>
     </core-menu>
     </core-dropdown>
     </core-menu-button>
     	<span flex>Eric L. Epps</span>
      </core-toolbar>
+     
+     <core-drawer-panel>
+  <div drawer>
+        <core-item label="Cover Letter"><a href="cover-letter.html"></a></core-item>
+    	<core-item label="Education"><a href="education.html"></a></core-item>
+    	<core-item label="Experience"><a href="experience.html"></a></core-item>
+    	<core-item label="Skills"><a href="skills.html"></a></core-item>
+    	<core-item label="Contact"><a href="contact.html"></a></core-item>
+ </div>
+  <div main>
 <h2>Mailing Address</h2>
 	<div class="adr">
 		<span class="street-address">PO Box 363</span><br/>
@@ -43,5 +52,9 @@
 		<a href="mailto:eric@ericepps.me" class="email">eric@ericepps.me</a><br/>
 		<span class="tel">815-293-7771</span>
 	</div>
+    
+      </div>
+</core-drawer-panel>
+
 </body>
 </html>
