@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta content="width=device-width,initial-scale=1.0" name="viewport">
-<script src="components/bower_components/webcomponentsjs/webcomponents.js"></script>
 <link rel="import" href="components/bower_components/paper-elements/paper-elements.html">
 <link rel="import" href="components/bower_components/core-toolbar/core-toolbar.html">
   <link href="components/bower_components/core-collapse/core-collapse.html" rel="import">
@@ -13,9 +12,9 @@
   <link href="components/bower_components/core-item/core-item.html" rel="import">
   <link href="components/bower_components/core-menu/core-menu.html" rel="import">
 
-  <link href="components/bower_components/core-menu-button/core-menu-button.html" rel="import">
 <title>R&eacute;sum&eacute; for Eric L Epps</title>
 <style type="text/css">core-item a:link { color:black; text-decoration:none; }</style>
+<style type="text/css" id="forJS"></style>
 </head>
 <body>
 <core-toolbar>
@@ -33,6 +32,17 @@
     </core-menu-button>
     	<span flex>Eric L. Epps</span>
      </core-toolbar>
+     	<div>
+	<h2>Highlight: </h2>
+	<ul>
+		<li><a href="#" onfocus="showCascade()" onclick="showCascade()">Cascade</a></li>
+		<li><a href="#" onfocus="showPHP()" onclick="showPHP()">PHP</a></li>
+		<li><a href="#" onfocus="showSQL()" onclick="showSQL()">MySQL</a></li>
+		<li><a href="#" onfocus="showADA()" onclick="showADA()">Accessibility</a></li>
+		<li><a href="#" onfocus="clearAll()" onclick="clearAll()">Clear</a></li>
+	</ul>
+	</div>
+
 <section id="experience">
 	<h1>Experience</h1>
 	<article id="svcc">
@@ -42,15 +52,15 @@
 			<h3>Web Developer</h3>
 		</hgroup>
 		<ul>
-			<li class="highlight cascade">Administered Cascade Server CMS</li>
+			<li class="cascade">Administered Cascade Server CMS</li>
 			<li class="cascade">Maintained and coordinated updates and additions to the College's website</li>
 			<li class="highlight ada">Recoded College's website to improve accessibility for users with disabilities</li>
+            <li class="highlight mobile">Implemented Responsive Web Design layout.</li>
 			<li class="highlight cascade php mysql">Used Web Services (PHP/SOAP) to automate tasks in Cascade Server</li>
 			<li class="highlight php cascade mysql">Integrated Acalog college catalog, Banner, Four Winds Interactive, and more into Cascade Server</li>
 			<li class="php mysql">Coordinated workflows, integrations, and custom applications for FileBound document imaging system</li>
-			<li class="highlight cascade">Co-coordinator of <a href="http://ccusergroup.blogspot.com/">Cascade Server Community College User Group</a>, 2012-13</li>
-			<li class="highlight cascade">Presented at <a href="http://www.hannonhill.com/news/conference/Sessions/Calendars-Cascade-Server.html">2012 Cascade Server User Conference</a></li>
-			<li class="cascade">Developing mobile app using Ellucian Mobile Platform Edition</li>
+			<li class="highlight cascade">Presented at <a href="http://www.hannonhill.com/news/conference/Sessions/Calendars-Cascade-Server.html">2012</a> and <a href="http://conference.hannonhill.com/sessions/using-cascade-technology-to-increase-seolanding-page-optimization.php">2014</a> Cascade Server User Conference</li>
+			<li class="highlight mobile">Developing mobile app using Ellucian Mobile Platform Edition</li>
 		</ul>
         <div class="showMore"><a href="#svcc" onclick="showMore('svcc',this)">Show All</a></div>
 	</article>
@@ -89,68 +99,7 @@
         <div class="showMore"><a href="#cba" onclick="showMore('cba',this)">Show All</a></div>
     </article>
 </section>
-<div id="top"><a href="#">top</a></div>
-<script type="text/javascript">
-var navs = document.getElementsByTagName('nav');
-for (var i = 0;i < navs.length;i++) {
-	navs[i].style.display = 'block';
-}
-var articles = document.getElementsByTagName('article');
-for (var a = 0;a < articles.length;a++) {
-	var lis = articles[a].getElementsByTagName('li');
-	for (var i = 0;i < lis.length;i++) {
-		if (lis[i].className == '') {
-			lis[i].className = 'normal';
-		}
-		var hrefs = lis[i].getElementsByTagName('a');
-		for (var h = 0;h < hrefs.length;h++) {
-			hrefs[h].setAttribute('target', '_blank');
-		}
-	}
-}
-function showToTop() {
-	if(elementInViewport(document.getElementById('education'))) {
-		document.getElementById('top').style.display = 'block';
-	} else {
-		document.getElementById('top').style.display = 'none';
-	}
-}
-// Source for elementInViewport() -- https://gist.github.com/2300296
-function elementInViewport(el) {
-  var rect = el.getBoundingClientRect()
-  return rect.top < (window.innerHeight || document.body.clientHeight) && rect.left < (window.innerWidth || document.body.clientWidth);
-}
-
-function showCascade() {
-	styleEl = document.getElementById("forJS");
-	styleEl.innerHTML = '.cascade{background:rgba(0,0,255,.3);box-shadow:0px 0px 5px rgba(0,0,255,.3);}';
-}
-function showPHP() {
-	styleEl = document.getElementById("forJS");
-	styleEl.innerHTML = '.php{background:rgba(255,0,0,.3);box-shadow:0px 0px 5px rgba(255,0,0,.3);}';
-}
-function showSQL() {
-	styleEl = document.getElementById("forJS");
-	styleEl.innerHTML = '.mysql{background-color:rgba(0,255,0,.3);box-shadow:0px 0px 5px rgba(0,255,0,.3);}';
-}
-function showADA() {
-	styleEl = document.getElementById("forJS");
-	styleEl.innerHTML = '.ada{background:rgba(255,255,0,.5);box-shadow:0px 0px 5px rgba(255,255,0,.5);}';
-}
-function clearAll() {
-	styleEl = document.getElementById("forJS");
-	styleEl.innerHTML = '';
-}
-function showMore(articleID, el) {
-	styleEl = document.getElementById("forJS");
-	if (el.innerHTML == 'Show All') {
-		styleEl.innerHTML = styleEl.innerHTML + '#' + articleID + ' ul li.normal {display:list-item;}';
-		el.innerHTML = 'Show Highlights';
-	} else {
-		styleEl.innerHTML = styleEl.innerHTML.replace('#' + articleID + ' ul li.normal {display:list-item;}','');
-		el.innerHTML = 'Show All';
-	}
-}
-</script>
+<script src="components/bower_components/webcomponentsjs/webcomponents.js"></script>
+<script src="actions.js"></script>
 </body>
 </html>
