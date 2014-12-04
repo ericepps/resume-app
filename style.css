@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 html, body {min-height:100%;}
-body {font-family:Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;font-size:14px;background:#cdb380;background:-moz-linear-gradient(top, rgb(150,125,125) 0%, rgb(85,70,70) 100%);background:-webkit-linear-gradient(top, rgba(209,22,0,0.75) 0%,rgb(85,70,70) 100%);background:-o-linear-gradient(top, rgb(150,125,125) 0%,rgb(85,70,70) 100%);background:-ms-linear-gradient(top, rgb(150,125,125) 0%,rgb(85,70,70) 100%);background:linear-gradient(to bottom, rgb(135,125,125) 0%,rgb(75,70,70) 100%);}
+body {font-family:Roboto, Helvetica, sans-serif;font-size:14px;}
 body, html, h1, h2, h3, ul, li, div, hr {margin:0px;padding:0px;}
 h1, h2, h3 { text-shadow:1px 1px 3px rgba(0,0,0,.4); }
 h1, h1 a, h1 a:link, h1 a:visited {color:rgb(35,0,0);font-size:22px;}
@@ -14,21 +14,12 @@ li {margin-left:7ex;padding-top:.5ex;}
 hr {clear:both;border:none;}
 .hoverTitle {border-bottom:1px dotted #999;}
 
-header, nav, section, article {clear:both;width:95%;margin:0px auto;padding:2ex .5em;background:#FFF;background:rgba(255,255,255,.7);}
-header {margin-top:.75em;border-top-left-radius:9px;border-top-right-radius:9px;}
-header h1 {font-size:24px;text-align:center;}
-header div {float:right;text-align:right;margin:0px 2em;}
-header div.adr {float:left;text-align:left;}
-header a, header a:link, header a:visited {color:#000;}
+header, nav, section, article {clear:both;padding:2ex .5em;}
 nav {display:none;padding:.5em;background:#000;}
 nav h2 {display:inline-block;font-size:16px;color:#fff;}
 nav ul {display:inline;line-height:35px;}
 nav ul li {list-style-type:none;display:inline-block;margin:0px 1ex;}
-nav ul li a, nav ul li a:link, nav ul li a:visited {color:#FFF;font-weight:bold;border-radius:9px;border:1px solid #c03;box-shadow:1px 1px 3px rgba(0,0,0,.3);padding:.5ex .5em;background:#710a1b;background:-moz-linear-gradient(top, rgb(113,10,27) 0%, rgb(193,18,47) 100%);
-background:-webkit-linear-gradient(top, rgb(113,10,27) 0%,rgb(193,18,47) 100%);
-background:-o-linear-gradient(top, rgb(113,10,27) 0%,rgb(193,18,47) 100%);
-background:-ms-linear-gradient(top, rgb(113,10,27) 0%,rgb(193,18,47) 100%);
-background:linear-gradient(to bottom, rgb(113,10,27) 0%,rgb(193,18,47) 100%);}
+nav ul li a, nav ul li a:link, nav ul li a:visited {color:#FFF;font-weight:bold;border-radius:9px;border:1px solid #c03;box-shadow:1px 1px 3px rgba(0,0,0,.3);padding:.5ex .5em;}
 nav ul li a:hover {background:rgb(113,10,27) ;box-shadow:1px 1px 5px rgba(0,0,0,.5);}
 nav div#jump { display:none; }
 section>h1 {border-bottom:double 3px #031634;text-align:center;padding-top:0px;font-size:20px;}
