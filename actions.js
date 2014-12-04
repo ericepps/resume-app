@@ -33,6 +33,10 @@ function showCascade() {
 	styleEl = document.getElementById("forJS");
 	styleEl.innerHTML = '.cascade{background:rgba(0,0,255,.3);box-shadow:0px 0px 5px rgba(0,0,255,.3);}';
 }
+function showMobile() {
+	styleEl = document.getElementById("forJS");
+	styleEl.innerHTML = '.mobile{background:rgba(0,0,255,.3);box-shadow:0px 0px 5px rgba(0,0,255,.3);}';
+}
 function showPHP() {
 	styleEl = document.getElementById("forJS");
 	styleEl.innerHTML = '.php{background:rgba(255,0,0,.3);box-shadow:0px 0px 5px rgba(255,0,0,.3);}';
