@@ -29,11 +29,11 @@ section>p {text-align:center;}
 article {padding:1.5%;border-radius:5px;box-shadow:1px 1px 5px rgba(0, 0, 0, .2);margin-top:1em;}
 article hgroup h1 {font-size:18px;}
 article hgroup h2 {float:right;font-size:16px;}
-article hgroup h2, article hgroup h2 a, article hgroup h2 a:link, article hgroup h2 a:visited {color:rgb(113,10,27);}
+article hgroup h2, article hgroup h2 a, article hgroup h2 a:link, article hgroup h2 a:visited {color:#e53935;}
 article hgroup {border-bottom:1px solid rgb(85,70,70);}
 article ul li.highlight {text-shadow:0px 0px 1px rgba(0,0,0,.4);}
 .showMore {display:none;text-align:center;margin:5px 0px;}
-.showMore a {padding:3px 8px;background:#dcc;border-radius:7px;box-shadow:1px 1px 3px #fff;}
+.showMore a {padding:3px 8px;background:#ef9a9a;border-radius:7px;box-shadow:1px 1px 3px #fff;}
 section#skills {border-bottom-left-radius:9px;border-bottom-right-radius:9px;}
 section#skills article {width:45%;clear:none;}
 article#skillsProf {float:left;margin-left:1.5%;}
