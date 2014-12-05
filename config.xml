@@ -17,7 +17,6 @@
     </author>
     
     <preference name="androidSdkVersion" value="14"/>
-	<preference name="fullscreen" value="true" />
 
 
 </widget>
