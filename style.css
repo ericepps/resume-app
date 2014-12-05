@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
-core-toolbar { background-color:#f44336; color:white; }
+core-toolbar { background-color:#f44336; color:white; height: 64px; font-size: 1.3em; display:block; }
 
 html, body {min-height:100%;}
 body {font-family:Roboto, Helvetica, sans-serif;font-size:14px;}
