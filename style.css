@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
+core-toolbar { background-color:#f44336; color:white; }
+
 html, body {min-height:100%;}
 body {font-family:Roboto, Helvetica, sans-serif;font-size:14px;}
 body, html, h1, h2, h3, ul, li, div, hr {margin:0px;padding:0px;}
